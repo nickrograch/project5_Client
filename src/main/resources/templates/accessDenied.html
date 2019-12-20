@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Solo Project</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>
+
+</head>
+<body>
+<div data-th-include="header.html"></div>
+<div data-th-include="leftBarAdmin.html"></div>
+
+<div class="container-user">
+    <h1><strong>ACCESS DENIED!!!</strong></h1>
+    <form method="get" action="/login">
+        <a href="/login">Авторизоваться под другим пользователем</a>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

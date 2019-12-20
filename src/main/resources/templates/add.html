@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Solo Project</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css"/>
+
+</head>
+<body>
+<div data-th-include="header.html"></div>
+<div data-th-include="leftBarAdmin.html"></div>
+<div class="container-userList">
+    <h1>Admin panel</h1><br/>
+    <div class="container-header-admin-panel">
+        <div class="container-custom container-header-admin-panel-tab">
+            <a href="/userlist"><h4 class="text-blue">Users table</h4></a>
+        </div>
+        <div class="shadow-lg container-white container-header-admin-panel-tab">
+            <a href="/add"><h4 class="text-black-50">New User</h4></a>
+        </div>
+    </div>
+    <div class="shadow-lg container-my">
+        <h4 class="text-black-50">Add new user</h4>
+    </div>
+    <div class="container-white">
+        <form method="post">
+            <div class="container-add">
+                <h4 class="text-black-50">Email</h4>
+                <input type="email" name="email" class="form-control" placeholder="Email" style="width: 400px"
+                       required="">
+                <h4 class="text-black-50">Login</h4>
+                <input type="text" name="name" class="form-control" placeholder="Login" required="">
+                <h4 class="text-black-50">Password</h4>
+                <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                <h4 class="text-black-50">Role</h4>
+                <select name="role" class="form-control" th:placeholder="Role" required="">
+                    <option>USER</option>
+                    <option>ADMIN</option>
+                </select>
+<!--                <optional type="text" value="USER" name="role" class="form-control" placeholder="Role" required="">-->
+                <button class="btn btn-lg btn-success btn-block" type="submit" style="width: 200px">Add new user
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
