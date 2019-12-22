@@ -21,9 +21,9 @@ public class UserListController {
         header.set("Authorization", (String) (session.getAttribute("Authorization")));
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<AuthenticationRequestDto> entity = new HttpEntity<>( header);
-        ResponseEntity<AppUserDTO> result = restTemplate.exchange("http://localhost:8075/api/v1/admin/userlist", HttpMethod.GET, entity, AppUserDTO.class);
-
-        AppUserDTO userDtoFromBody = result.getBody();
+//        ResponseEntity<AppUserDTO> result = restTemplate.exchange("http://localhost:8075/api/v1/admin/userlist", HttpMethod.GET, entity, AppUserDTO.class);
+//
+//        AppUserDTO userDtoFromBody = result.getBody();
         return "userlist";
     }
 }

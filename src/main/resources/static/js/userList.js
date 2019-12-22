@@ -1,13 +1,16 @@
-let inputs = document.getElementsByTagName("input"), len = inputs.length, i, token;
+let inputs = document.getElementsByTagName("input"), len = inputs.length, i, token, userRole;
 for (i = 0; i<len; i++) {
     if (inputs[i].name==="token") {
         token = inputs[i].value;
-        break;
     }
-};
+    if (inputs[i].name==="userRole") {
+        userRole = inputs[i].value;
+    }
+}
 
 $(document).ready(function () {
-    getTable();
+    if (userRole==="[ADMIN]"){
+        getTable();}
 });
 
 function getTable() {

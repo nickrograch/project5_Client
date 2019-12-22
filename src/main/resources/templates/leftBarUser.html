@@ -10,9 +10,10 @@
 </head>
 <body>
 <nav class="container-left">
+    <div th:if="${session.user.getRole()=='[ADMIN]'}">
     <div class="container-custom">
         <a href="/userlist" class="text-blue">Admin</a>
-    </div>
+    </div></div>
     <div class="container-focused">
         <a href="/hello" class="text-white">User</a>
     </div>
